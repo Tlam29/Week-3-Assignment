@@ -1,17 +1,16 @@
 //Create an array called ages that contains the following values: 3, 9, 23, 64, 2, 8, 28, 93
-let ages= [3, 9, 23, 64, 2, 8, 28, 93];
+let ages = [3, 9, 23, 64, 2, 8, 28, 93];
 //Programmatically subtract the value of the first element in the array from the value in the last element of the array (do not use numbers to reference the last element, find it programmatically, ages[7] – ages[0] is not allowed). Print the result to the console.
-console.log(ages[0]-ages[ages.length-1]);
+ages[0]-ages[ages.length-1];
 //Add a new age to your array and repeat the step above to ensure it is dynamic (works for arrays of different lengths).
 ages[8] = 21;
-console.log(ages[0]-ages[ages.length-1]);
 //Use a loop to iterate through the array and calculate the average age. Print the result to the console.
 var total =0;
 for(var i = 0; i < ages.length; i++){
-    total += ages[i];
+    total += ages[i]; 
 }
 var avg = total/ages.length;
-console.log(avg);
+console.log("Average age is: " + avg);
 
 //Create an array called names that contains the following values: ‘Sam’, ‘Tommy’, ‘Tim’, ‘Sally’, ‘Buck’, ‘Bob’.
 var names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
@@ -22,7 +21,7 @@ for(var i = 0; i < names.length; i++){
     totalLetters += names[i].length;
 }
 var avgLetters = totalLetters/names.length;
-console.log(avgLetters);
+console.log("Average number of letters is: " + avgLetters);
 //Use a loop to iterate through the array again and concatenate all the names together, separated by spaces, and print the result to the console.
 let joined = "";
 for(var i = 0; i < names.length; i++){
@@ -39,14 +38,14 @@ var nameLengths = [];
             nameLengths[i]= names[i].length;
 		}
         //nameLengths.push(nameLengths[i]);
-       console.log(nameLengths);
+       console.log("The length of the names are: " + nameLengths);
         
 //Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array. Print the result to the console.
 var sum = 0;
 for(var i = 0; i < nameLengths.length; i++){
     sum += nameLengths[i];
 }
-    console.log(sum);
+    console.log("The sum of all the names added together is: " + sum);
 //Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. (i.e. if I pass in ‘Hello’ and 3, I would expect the function to return ‘HelloHelloHello’).
 
 function greeting (word, n){
@@ -79,18 +78,18 @@ function avgOfArray (array){
     }
     return avgOfArray/array.length;
 }
-console.log(avgOfArray(ages));
+console.log("Average of this array is: " + avgOfArray(ages));
 //Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
 function compareArray (array1,array2){
    return avgOfArray(array1) > avgOfArray(array2);
 }
 let array2 = [150,200,210]
-console.log(compareArray(ages,array2));
+console.log("Array1 is greater than Array2: " + compareArray(ages,array2));
 //Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
 function willBuyDrink(isHotOutside,moneyInPocket){
    return isHotOutside && moneyInPocket > 10.50
 }
-console.log(willBuyDrink(true,9));
+console.log(willBuyDrink(false,12));
 //Create a function of your own that solves a problem. In comments, write what the function does and why you created it.
 function enoughForSwich(costOfSwitch,moneyInPocket){   //Function checking if you have enough money
     if(moneyInPocket > costOfSwitch){               //Checking if you have enough money for a switch
@@ -99,4 +98,4 @@ function enoughForSwich(costOfSwitch,moneyInPocket){   //Function checking if yo
         console.log("Keep working!")    
     }
 }
-enoughForSwich(300,310);                        //Calling the funciton
+enoughForSwich(400,310);                        //Calling the funciton
